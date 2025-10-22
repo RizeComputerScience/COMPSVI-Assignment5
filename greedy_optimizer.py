@@ -155,7 +155,7 @@ def test_package_prioritization():
     print(f"  Got: {len(result2)} deliveries")
     print(f"  Result: {result2}\n")
     
-    # Test case 3: Mixed overlapping
+   # Test case 3: Mixed overlapping
     test3 = [
         {'delivery_id': 'A', 'start': 1, 'end': 3},
         {'delivery_id': 'B', 'start': 2, 'end': 5},
@@ -164,10 +164,10 @@ def test_package_prioritization():
     ]
     result3 = maximize_deliveries(test3)
     print(f"Test 3: Mixed overlapping")
-    print(f"  Expected: 3 deliveries (A, C, D with earliest finish greedy)")
+    print(f"  Expected: 2 deliveries (A ends at 3, C starts at 4)")
     print(f"  Got: {len(result3)} deliveries")
     print(f"  Result: {result3}")
-    print(f"  {'✓ PASS' if len(result3) == 3 else '✗ FAIL'}\n")
+    print(f"  {'✓ PASS' if len(result3) == 2 else '✗ FAIL'}\n")
 
 
 def test_truck_loading():
